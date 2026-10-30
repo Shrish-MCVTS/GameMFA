@@ -247,6 +247,19 @@ function checkCipher() {
 
 function factorChallenge() {
   updateLayers(3, 2);
+
+  show(`
+    <p class="eyebrow">FINAL SECURITY LAYER // MFA</p>
+    <h2>More layers. Stronger protection.</h2>
+    <div class="panel">
+      <p><strong>MFA strengthens account security by requiring more than one proof of identity. If one layer is compromised, another layer still stands between an attacker and the account.</strong></p>
+    </div>
+    <p>The final laser puzzle represents those layers working together. Each beam is another check an intruder must get past.</p>
+    <button onclick="startFinalVault()">ENTER THE FINAL VAULT &nbsp; →</button>
+  `);
+}
+
+function startFinalVault() {
   startDodge(
     completeMission,
     "Using hardware keys are one of the most secure options when you want to add layers of defense to your account.",
