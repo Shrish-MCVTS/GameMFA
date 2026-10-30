@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap");
+
 :root {
   color-scheme: dark;
   --bg: #080b12;
@@ -198,4 +200,115 @@ button:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow:
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* Pixel-art palette and edges only: keep all game copy, layout, and behavior intact. */
+
+:root {
+  --bg: #15102d;
+  --panel: #211a4d;
+  --panel-raised: #2b235b;
+  --line: #453979;
+  --text: #fff4da;
+  --muted: #b7aed5;
+  --cyan: #28e5dc;
+  --cyan-dim: #8770ff;
+  --red: #ff4f9a;
+  --green: #28e5dc;
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 0, #302267 0, transparent 68%);
+  background-size: 24px 24px, 24px 24px, auto;
+}
+
+.brand, .eyebrow, .track-heading, .layer-level, .terminal-bar,
+.footer, .mission-stamp span, .dodge-hud {
+  font-family: "Press Start 2P", "Courier New", monospace;
+}
+
+.brand-mark {
+  border: 0;
+  background: #8770ff;
+  color: #fff4da;
+  box-shadow: 3px 3px 0 #ff4f9a;
+}
+
+h1, #screen h2 { font-family: "Chakra Petch", "Trebuchet MS", sans-serif; }
+h1 { color: var(--text); }
+h1 span, #screen h2.success { color: var(--cyan) !important; }
+.subtitle { color: #c7bfdc; }
+.mission-stamp { border: 2px solid #554687; box-shadow: 3px 3px 0 #ff4f9a; }
+.mission-stamp strong { color: var(--text); }
+.mission-stamp span:last-child { color: var(--red); }
+
+.progress-track { height: 5px; background: #3a3165; }
+.progress-fill { background: var(--cyan); box-shadow: 0 0 0 2px #15102d, 0 0 0 3px var(--cyan); }
+.layer { border: 2px solid #42376d; background: #1d173e; color: #a99fc9; }
+.layer.active { border-color: var(--cyan); background: #28e5dc12; color: var(--cyan); }
+.layer.done { border-color: #28e5dc77; color: var(--cyan); }
+.layer.active .layer-icon { text-shadow: 2px 2px 0 #8770ff; }
+
+.terminal {
+  border: 3px solid #554687;
+  background: #1b153a;
+  box-shadow: 6px 6px 0 #090719;
+}
+.terminal::after { opacity: .14; }
+.terminal-bar { border-color: #453979; background: #211a4d; }
+.terminal-lights i { border-radius: 0; }
+#screen p { color: #d3cbe4; }
+#screen h2 { color: var(--text); }
+#screen .eyebrow { color: var(--cyan); }
+.panel, .briefing-card {
+  border: 2px solid #4a3e79;
+  background: #231c4b;
+  box-shadow: 3px 3px 0 #100c27;
+}
+.hero, .villain {
+  border: 2px solid #554687;
+  border-left: 6px solid var(--cyan);
+  background: #28e5dc0c;
+  color: #e2dced;
+}
+.villain { border-left-color: var(--red); background: #ff4f9a0d; }
+.hero strong { color: var(--cyan) !important; }
+.villain strong { color: #ff83b6 !important; }
+
+input {
+  border: 2px solid #51447f;
+  background: #17112f;
+  color: var(--text);
+  font-family: "Chakra Petch", "Trebuchet MS", sans-serif;
+}
+input:focus { border-color: var(--cyan); box-shadow: 3px 3px 0 #8770ff; }
+button {
+  border: 2px solid var(--text);
+  background: #ffcf3f;
+  color: #17102d;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  box-shadow: 4px 4px 0 var(--red);
+}
+button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--red); }
+button:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--red); }
+button.secondary { border-color: #8272ba; background: #30265f; color: var(--text); box-shadow: 4px 4px 0 #6e55cd; }
+button.danger { border-color: #ff9ac4; background: #5a204e; color: var(--text); box-shadow: 4px 4px 0 var(--red); }
+button:disabled { box-shadow: none; }
+.choice { border: 2px solid #51447f; background: #211a4d; color: var(--text); font-family: "Chakra Petch", sans-serif; }
+.choice:hover { border-color: var(--cyan); background: #28e5dc12; color: var(--cyan); }
+.feedback-error { color: #ff83b6 !important; }
+.feedback-success, .success { color: var(--cyan) !important; }
+.big { color: #ff83b6; text-shadow: 3px 3px 0 #8770ff; }
+.dodge-arena { border: 2px solid #8770ff; image-rendering: pixelated; }
+.dodge-controls button { border-color: #8272ba; background: #30265f; color: var(--cyan); box-shadow: 3px 3px 0 #6e55cd; }
+.footer { color: #a99fc9; }
+
+@media (max-width: 600px) {
+  .brand { font-size: 8px; }
+  button { font-size: 9px; }
 }

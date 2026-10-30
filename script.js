@@ -129,7 +129,7 @@ function layer1() {
     <h2>The Password Gate</h2>
     <p>The villain finds a note beside the terminal:</p>
     <div class="panel">
-      <p><strong>Security clue:</strong> The password has 8 characters, including uppercase and lowercase letters, numbers, and a symbol.</p>
+      <p><strong>Security clue:</strong> Passwords can be found in many ways. Including notes, sticky notes, and even hidden messages hidden within Inspect Elements.</p>
     </div>
     <label for="password">Enter the training password:</label>
     <input id="password" placeholder="Enter password" autocomplete="off" />
